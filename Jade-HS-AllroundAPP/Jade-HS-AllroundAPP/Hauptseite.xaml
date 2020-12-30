@@ -1,0 +1,71 @@
+﻿<Window x:Class="Jade_HS_AllroundAPP.Hauptseite"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Jade_HS_AllroundAPP"
+        mc:Ignorable="d"
+       Title="Jade-HS.AllroudAPP" Icon="Bilder/Jade-HS Logo.jpg" 
+        WindowStartupLocation="CenterScreen" WindowState="Maximized"
+        WindowStyle="None"
+        MouseDown="Window_MouseDown">
+
+    <Window.Background>
+        <ImageBrush ImageSource="Bilder/bibliothek-buecher-globus-tisch-retro.jpg"  />
+    </Window.Background>
+
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+           
+        </Grid.RowDefinitions>
+
+      
+
+        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Grid.Row="0" Grid.Column="2">
+            <Button Background="White" x:Name="btn_Minimize" Click="btn_Minimize_Click" >
+                <Image Height="25" Source="Bilder/minimize-button-567898.png"/>
+            </Button>
+            
+            <Button Background="White" x:Name="btn_maximize" Click="btn_maximize_Click" >
+                <Image Height="25" Source="Bilder/maximize-512.png"/>
+            </Button>
+
+            <Button x:Name="btn_Close" Click="btn_Close_Click" Background="White"  Margin="0">
+                <Image  Height="25" Source="Bilder/close-button-icon-19.jpg"/>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical" Grid.RowSpan="3" Grid.Column="0">
+            <Button Width="30" Height="30" Background="White" x:Name="btn_Menü" Click="btn_Menü_Click">
+                <Image Width="25" Height="25" Source="Bilder/Menü.icon.jpg"/>
+            </Button>
+
+            <Button Height="30" Width="30" Background="White" Margin="0,70,0,0" x:Name="btn_jadehswebmailapi">
+                <Image   Source="Bilder/Jade-HS Logo.jpg"/>
+            </Button>
+
+            <Button Height="30" Width="30" Background="White" Margin="0,10,0,0" >
+                <Image   Source="Bilder/organisator.icon.jpg"/>
+            </Button>
+
+            <Button Height="30" Width="30" Background="White" Margin="0,10,0,0" >
+                <Image   Source="Bilder/Stundenplan.icon.png"/>
+            </Button>
+
+            <Button Height="30" Width="30" Background="White" Margin="0,10,0,0" >
+                <Image   Source="Bilder/sport.icon.png"/>
+            </Button>
+
+        </StackPanel>
+    </Grid>
+</Window>
