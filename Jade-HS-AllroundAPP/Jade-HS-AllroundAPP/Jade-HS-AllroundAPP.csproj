@@ -172,5 +172,20 @@
   <ItemGroup>
     <Resource Include="Bilder\organisator.icon.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\moodle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\laufwerk.icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\cocktail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\studenten hilfe icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\bewerbungen.icon.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

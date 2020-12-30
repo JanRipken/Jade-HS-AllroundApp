@@ -55,15 +55,36 @@
             </Button>
 
             <Button Height="30" Width="30" Background="White" Margin="0,10,0,0" >
-                <Image   Source="Bilder/organisator.icon.jpg"/>
-            </Button>
-
-            <Button Height="30" Width="30" Background="White" Margin="0,10,0,0" >
                 <Image   Source="Bilder/Stundenplan.icon.png"/>
             </Button>
 
             <Button Height="30" Width="30" Background="White" Margin="0,10,0,0" >
+                <Image   Source="Bilder/moodle.png"/>
+            </Button>
+
+            <Button Height="30" Width="30" Background="White" Margin="0,10,0,0" >
+                <Image   Source="Bilder/laufwerk.icon.png"/>
+            </Button>
+
+            <Button Height="30" Width="30" Background="White" Margin="0,10,0,0" >
+                <Image   Source="Bilder/organisator.icon.jpg"/>
+            </Button>
+
+            <Button Height="30" Width="30" Background="White" Margin="0,10,0,0" >
+                <Image   Source="Bilder/studenten hilfe icon.png"/>
+            </Button>
+            
+            <Button Height="30" Width="30" Background="White" Margin="0,10,0,0" >
                 <Image   Source="Bilder/sport.icon.png"/>
+            </Button>
+
+            <Button Height="30" Width="30" Background="White" Margin="0,10,0,0" >
+                <Image   Source="Bilder/cocktail.png"/>
+            </Button>
+
+
+            <Button Height="30" Width="30" Background="White" Margin="0,100,0,0" >
+                <Image   Source="Bilder/bewerbungen.icon.jpg"/>
             </Button>
 
         </StackPanel>
