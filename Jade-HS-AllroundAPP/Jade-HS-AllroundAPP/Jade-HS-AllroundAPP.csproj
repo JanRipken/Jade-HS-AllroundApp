@@ -161,9 +161,6 @@
     <Resource Include="Bilder\close-button-icon-19.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Bilder\Menü.icon.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Bilder\sport.icon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -186,6 +183,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Bilder\bewerbungen.icon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Bilder\menu.icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

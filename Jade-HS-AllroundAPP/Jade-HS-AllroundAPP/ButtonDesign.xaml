@@ -32,6 +32,8 @@
         </Style.Triggers>
     </Style>
 
+    
+    
     <Style TargetType="{x:Type Menu}">
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="FontFamily" Value="Helvetica"/>
