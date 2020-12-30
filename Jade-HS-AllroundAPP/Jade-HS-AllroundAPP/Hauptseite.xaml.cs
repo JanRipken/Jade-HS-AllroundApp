@@ -53,9 +53,6 @@ namespace Jade_HS_AllroundAPP
                 DragMove();
         }
 
-        private void btn_Menü_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -46,9 +46,12 @@
         </StackPanel>
 
         <StackPanel Orientation="Vertical" Grid.RowSpan="3" Grid.Column="0">
-            <Button Width="30" Height="30" Background="White" x:Name="btn_Menü" Click="btn_Menü_Click">
-                <Image Width="25" Height="25" Source="Bilder/Menü.icon.jpg"/>
-            </Button>
+            <Menu Width="30" Height="30" Background="White" x:Name="btn_Menü">
+                <Image Width="30" Height="30" Source="Bilder/Menü.icon.jpg"/>
+
+            
+
+            </Menu>
 
             <Button Height="30" Width="30" Background="White" Margin="0,70,0,0" x:Name="btn_jadehswebmailapi">
                 <Image   Source="Bilder/Jade-HS Logo.jpg"/>
