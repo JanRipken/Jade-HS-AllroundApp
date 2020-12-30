@@ -94,7 +94,7 @@
         <TextBlock Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"
                    VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"
                    FontSize="50" Opacity="0.6" Background="Black" x:Name="TB_Wilkommen"  TextAlignment="Center" >
-            Wilkommen auf der Jade-HS-Allroud App <LineBreak/> 
+            Wilkommen auf der Jade-HS-Allroud Application <LineBreak/> 
                 by Jan Ripken
 
         </TextBlock>

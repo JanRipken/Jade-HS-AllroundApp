@@ -52,7 +52,8 @@
                              Opacity="0.5"
                              Height="25"
                              Margin="63,0,0,0"
-                             x:Name="txtb_Username"/>
+                             x:Name="txtb_Username"
+                             IsMouseCaptureWithinChanged="txtb_Username_IsMouseCaptureWithinChanged"/>
                     <iconPacks:PackIconMaterial Kind="Account" 
                                                 VerticalAlignment="Center" 
                                                 HorizontalAlignment="Center" 
@@ -79,7 +80,8 @@
                              Opacity="0.5"
                              Height="25"
                              Margin="63,0,0,0"
-                             x:Name="txtb_Password"/>
+                             x:Name="txtb_Password"
+                                 IsMouseCaptureWithinChanged="txtb_Password_IsMouseCaptureWithinChanged"/>
                     <iconPacks:PackIconMaterial Kind="FormTextboxPassword" 
                                                 VerticalAlignment="Center" 
                                                 HorizontalAlignment="Center" 

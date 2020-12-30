@@ -54,5 +54,15 @@ namespace Jade_HS_AllroundAPP
         {
 
         }
+
+        private void txtb_Username_IsMouseCaptureWithinChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            txtb_Username.Clear();
+        }
+
+        private void txtb_Password_IsMouseCaptureWithinChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            txtb_Password.Clear();
+        }
     }
 }
