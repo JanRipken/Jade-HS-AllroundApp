@@ -17,7 +17,7 @@
     <Grid>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="60"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
@@ -26,69 +26,102 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-           
+
         </Grid.RowDefinitions>
 
-      
+
 
         <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Grid.Row="0" Grid.Column="2">
             <Button Background="White" x:Name="btn_Minimize" Click="btn_Minimize_Click" >
                 <Image Height="25" Source="Bilder/minimize-button-567898.png"/>
             </Button>
-            
+
             <Button Background="White" x:Name="btn_maximize" Click="btn_maximize_Click" >
                 <Image Height="25" Source="Bilder/maximize-512.png"/>
             </Button>
 
-            <Button x:Name="btn_Close" Click="btn_Close_Click" Background="White"  Margin="0">
+            <Button x:Name="btn_Close" Click="btn_Close_Click" Background="White" Margin="0">
                 <Image  Height="25" Source="Bilder/close-button-icon-19.jpg"/>
             </Button>
         </StackPanel>
 
         <StackPanel Orientation="Vertical" Grid.RowSpan="3" Grid.Column="0">
-            <Menu Width="30" Height="30" Background="White" x:Name="btn_Menü">
+            <Menu Width="50" Height="50" Background="White" x:Name="btn_Menü">
 
-                
-               
+
+
             </Menu>
 
-            <Button Height="30" Width="30" Background="White" Margin="0,70,0,0" x:Name="btn_jadehswebmailapi">
+            <Button Height="50" Width="50" Background="White" Margin="0,70,0,0" x:Name="btn_jadehswebmailapi">
                 <Image   Source="Bilder/Jade-HS Logo.jpg"/>
             </Button>
 
-            <Button Height="30" Width="30" Background="White" Margin="0,10,0,0" >
+            <Button Height="50" Width="50" Background="White" Margin="0,10,0,0" >
                 <Image   Source="Bilder/Stundenplan.icon.png"/>
             </Button>
 
-            <Button Height="30" Width="30" Background="White" Margin="0,10,0,0" >
+            <Button Height="50" Width="50" Background="White" Margin="0,10,0,0" >
                 <Image   Source="Bilder/moodle.png"/>
             </Button>
 
-            <Button Height="30" Width="30" Background="White" Margin="0,10,0,0" >
+            <Button Height="50" Width="50" Background="White" Margin="0,10,0,0" >
                 <Image   Source="Bilder/laufwerk.icon.png"/>
             </Button>
 
-            <Button Height="30" Width="30" Background="White" Margin="0,10,0,0" >
+            <Button Height="50" Width="50" Background="White" Margin="0,10,0,0" >
                 <Image   Source="Bilder/organisator.icon.jpg"/>
             </Button>
 
-            <Button Height="30" Width="30" Background="White" Margin="0,10,0,0" >
+            <Button Height="50" Width="50" Background="White" Margin="0,10,0,0" >
                 <Image   Source="Bilder/studenten hilfe icon.png"/>
             </Button>
-            
-            <Button Height="30" Width="30" Background="White" Margin="0,10,0,0" >
+
+            <Button Height="50" Width="50" Background="White" Margin="0,10,0,0" >
                 <Image   Source="Bilder/sport.icon.png"/>
             </Button>
 
-            <Button Height="30" Width="30" Background="White" Margin="0,10,0,0" >
+            <Button Height="50" Width="50" Background="White" Margin="0,10,0,0" >
                 <Image   Source="Bilder/cocktail.png"/>
             </Button>
 
 
-            <Button Height="30" Width="30" Background="White" Margin="0,100,0,0" >
+            <Button Height="50" Width="50" Background="White" Margin="0,100,0,0" >
                 <Image   Source="Bilder/bewerbungen.icon.jpg"/>
             </Button>
 
         </StackPanel>
+
+        <TextBlock Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"
+                   VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"
+                   FontSize="50" Opacity="0.6" Background="Black" x:Name="TB_Wilkommen"  TextAlignment="Center" >
+            Wilkommen auf der Jade-HS-Allroud App <LineBreak/> 
+                by Jan Ripken
+
+        </TextBlock>
+
+        <Grid Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2" Visibility="Hidden">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+
+            <Border BorderBrush="White" BorderThickness="1" CornerRadius="5" 
+                    Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2" >
+                
+            </Border>
+            
+            
+        </Grid>
+        
     </Grid>
 </Window>
