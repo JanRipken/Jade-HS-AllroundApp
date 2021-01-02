@@ -52,7 +52,8 @@ namespace Jade_HS_AllroundAPP
 
         private void REGISTRIEREN_Click(object sender, RoutedEventArgs e)
         {
-
+            Registrierung registrierung = new Registrierung();
+            registrierung.Show();
         }
 
         private void txtb_Username_IsMouseCaptureWithinChanged(object sender, DependencyPropertyChangedEventArgs e)
