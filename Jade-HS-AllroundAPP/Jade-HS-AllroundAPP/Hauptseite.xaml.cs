@@ -79,7 +79,7 @@ namespace Jade_HS_AllroundAPP
 
             WB_Moodle.Visibility = Visibility.Hidden;
             WB_Datenlaufwerk.Visibility = Visibility.Hidden;
-
+            grd_assitours.Visibility = Visibility.Hidden;
 
             I_Homeworkout.Visibility = Visibility.Hidden;
 
@@ -96,7 +96,7 @@ namespace Jade_HS_AllroundAPP
 
             WB_Moodle.Visibility = Visibility.Hidden;
             WB_Datenlaufwerk.Visibility = Visibility.Hidden;
-
+            grd_assitours.Visibility = Visibility.Hidden;
 
             I_Homeworkout.Visibility = Visibility.Hidden;
 
@@ -113,7 +113,7 @@ namespace Jade_HS_AllroundAPP
 
             WB_Moodle.Visibility = Visibility.Hidden;
             WB_Datenlaufwerk.Visibility = Visibility.Hidden;
-
+            grd_assitours.Visibility = Visibility.Hidden;
 
             I_Homeworkout.Visibility = Visibility.Hidden;
 
@@ -130,7 +130,7 @@ namespace Jade_HS_AllroundAPP
 
             WB_Moodle.Visibility = Visibility.Hidden;
             WB_Datenlaufwerk.Visibility = Visibility.Hidden;
-
+            grd_assitours.Visibility = Visibility.Hidden;
 
             I_Homeworkout.Visibility = Visibility.Hidden;
 
@@ -147,7 +147,7 @@ namespace Jade_HS_AllroundAPP
 
             WB_Moodle.Visibility = Visibility.Visible;
             WB_Datenlaufwerk.Visibility = Visibility.Hidden;
-
+            grd_assitours.Visibility = Visibility.Hidden;
 
             I_Homeworkout.Visibility = Visibility.Hidden;
 
@@ -164,7 +164,7 @@ namespace Jade_HS_AllroundAPP
 
             WB_Moodle.Visibility = Visibility.Hidden;
             WB_Datenlaufwerk.Visibility = Visibility.Visible;
-
+            grd_assitours.Visibility = Visibility.Hidden;
 
             I_Homeworkout.Visibility = Visibility.Hidden;
 
@@ -181,7 +181,7 @@ namespace Jade_HS_AllroundAPP
 
             WB_Moodle.Visibility = Visibility.Hidden;
             WB_Datenlaufwerk.Visibility = Visibility.Hidden;
-
+            grd_assitours.Visibility = Visibility.Hidden;
 
             I_Homeworkout.Visibility = Visibility.Hidden;
 
@@ -199,7 +199,7 @@ namespace Jade_HS_AllroundAPP
 
             WB_Moodle.Visibility = Visibility.Hidden;
             WB_Datenlaufwerk.Visibility = Visibility.Hidden;
-
+            grd_assitours.Visibility = Visibility.Visible;
 
             I_Homeworkout.Visibility = Visibility.Hidden;
 
@@ -216,7 +216,7 @@ namespace Jade_HS_AllroundAPP
 
             WB_Moodle.Visibility = Visibility.Hidden;
             WB_Datenlaufwerk.Visibility = Visibility.Hidden;
-
+            grd_assitours.Visibility = Visibility.Hidden;
 
             I_Homeworkout.Visibility = Visibility.Visible;
 
@@ -233,7 +233,7 @@ namespace Jade_HS_AllroundAPP
 
             WB_Moodle.Visibility = Visibility.Hidden;
             WB_Datenlaufwerk.Visibility = Visibility.Hidden;
-
+            grd_assitours.Visibility = Visibility.Hidden;
 
             I_Homeworkout.Visibility = Visibility.Hidden;
 
@@ -250,7 +250,7 @@ namespace Jade_HS_AllroundAPP
 
             WB_Moodle.Visibility = Visibility.Hidden;
             WB_Datenlaufwerk.Visibility = Visibility.Hidden;
-
+            grd_assitours.Visibility = Visibility.Hidden;
 
             I_Homeworkout.Visibility = Visibility.Hidden;
 
@@ -267,7 +267,7 @@ namespace Jade_HS_AllroundAPP
 
             WB_Moodle.Visibility = Visibility.Hidden;
             WB_Datenlaufwerk.Visibility = Visibility.Hidden;
-
+            grd_assitours.Visibility = Visibility.Hidden;
 
             I_Homeworkout.Visibility = Visibility.Hidden;
 

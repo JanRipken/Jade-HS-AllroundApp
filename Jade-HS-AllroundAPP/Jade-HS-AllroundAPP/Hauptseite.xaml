@@ -11,6 +11,8 @@
         WindowStyle="None" ResizeMode="NoResize"
         MouseDown="Window_MouseDown" Height="880" Width="1300" >
 
+    
+    
     <Window.Resources>
         <Storyboard x:Key="MenuOpen">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
@@ -45,6 +47,9 @@
         <ImageBrush ImageSource="Bilder/bibliothek-buecher-globus-tisch-retro.jpg"  />
     </Window.Background>
 
+
+    
+    
     <Grid >
 
         <Grid.ColumnDefinitions>
@@ -78,7 +83,7 @@
         </Grid>
 
 
-        <StackPanel x:Name="GridMenu" Background="White"  Orientation="Vertical" Grid.RowSpan="3" Grid.Column="0" Width="70" HorizontalAlignment="Left">
+        <StackPanel Panel.ZIndex="10000000" x:Name="GridMenu" Background="White"  Orientation="Vertical" Grid.RowSpan="3" Grid.Column="0" Width="70" HorizontalAlignment="Left">
 
             <StackPanel  Background="#FF186B93" Height="100">
                 <Button x:Name="Btn_MenuClose" Visibility="Collapsed" Margin="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="35" Height="35" Background="{x:Null}" BorderBrush="{x:Null}" Click="Btn_CloseMenu_Click">
@@ -91,7 +96,7 @@
 
             </StackPanel>
 
-            <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
                 <ListViewItem x:Name="LVI_Home" MouseDoubleClick="LVI_Home_MouseDoubleClick" Height="60">
                     <StackPanel Orientation="Horizontal">
                         <fa:ImageAwesome Icon="Home" Height="40"></fa:ImageAwesome>
@@ -183,29 +188,30 @@
 
         <TextBlock Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"
                    VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"
-                   FontSize="50" Opacity="0.6" Background="Black" x:Name="TB_Wilkommen"  TextAlignment="Center" Visibility="Hidden" >
+                   FontSize="50" Opacity="0.6" Background="Black" x:Name="TB_Wilkommen"  TextAlignment="Center" Visibility="Visible" >
             Wilkommen auf der Jade-HS-Allround Application <LineBreak/> 
                 by Jan Ripken
         </TextBlock>
 
-        <Grid x:Name="Grd_Hauptansicht" Margin="100,70,0,0" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="2" >
+        <Grid x:Name="Grd_Hauptansicht" Margin="70,0,0,0" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="2" >
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="0"/>
+                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="14*"/>
+                <ColumnDefinition Width="0"/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="20"/>
+                <RowDefinition Height="0"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="20"/>
+                <RowDefinition Height="0"/>
             </Grid.RowDefinitions>
 
             <Border BorderBrush="Transparent" BorderThickness="1" CornerRadius="5" 
-                    Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2"
+                    Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="2"
                     x:Name="bd_Entscheidung" Visibility="Visible" >
 
 
@@ -225,25 +231,28 @@
                         <RowDefinition Height="20"/>
                     </Grid.RowDefinitions>
 
+                   
 
-                    <WebBrowser x:Name="WB_Webmail" Visibility="Hidden" Source="https://webmail.jade-hs.de" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2">
+                    <WebBrowser Panel.ZIndex="100" x:Name="WB_Webmail" Visibility="Hidden" Source="https://webmail.jade-hs.de" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="4">
                     </WebBrowser>
 
-                    <WebBrowser x:Name="WB_Moodle" Visibility="Hidden" Source="https://moodle.jade-hs.de/moodle/login/index.php" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2">
+                    <WebBrowser Panel.ZIndex="100"  x:Name="WB_Moodle" Visibility="Hidden" Source="https://moodle.jade-hs.de/moodle/login/index.php" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="4">
                     </WebBrowser>
 
-                    <WebBrowser x:Name="WB_Datenlaufwerk" Visibility="Hidden" Source="https://webfiler.jade-hs.de" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2">
+                    <WebBrowser Panel.ZIndex="100"  x:Name="WB_Datenlaufwerk" Visibility="Hidden" Source="https://webfiler.jade-hs.de" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="4">
                     </WebBrowser>
 
-                    <WebBrowser  x:Name="WB_GitHUB" Visibility="Hidden" Source="https://github.com/JanRipken" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2">
+                    <WebBrowser Panel.ZIndex="100"  x:Name="WB_GitHUB" Visibility="Hidden" Source="https://github.com/JanRipken" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="4">
                     </WebBrowser>
 
-                    <Image x:Name="I_Homeworkout" Source="Bilder/Homeworkout.png" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" 
-                           Grid.ColumnSpan="2" Visibility="Hidden"/>
+                    <Image Panel.ZIndex="100"  x:Name="I_Homeworkout" Source="Bilder/Homeworkout.png" Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" 
+                           Grid.ColumnSpan="4" Visibility="Hidden"/>
 
 
 
-                    <Grid Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" Grid.ColumnSpan="4" x:Name="grd_assitours" Visibility="Visible" >
+                    <Grid Grid.Row="0" Margin="0,-40,0,0"  Grid.RowSpan="4" Grid.Column="0" Grid.ColumnSpan="4" x:Name="grd_assitours" Visibility="Hidden" >
+
+
 
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="20"/>
@@ -331,6 +340,8 @@
             </Border>
 
         </Grid>
+
+
 
     </Grid>
 </Window>
