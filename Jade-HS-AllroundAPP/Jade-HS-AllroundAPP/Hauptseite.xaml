@@ -235,17 +235,10 @@
                            Grid.ColumnSpan="2" Visibility="Hidden"/>
 
 
-                   
-
-
 
                 </Grid>
 
-
-
-
             </Border>
-
 
         </Grid>
 
