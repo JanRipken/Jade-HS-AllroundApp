@@ -233,19 +233,19 @@
 
                    
 
-                    <WebBrowser Panel.ZIndex="100" x:Name="WB_Webmail" Visibility="Hidden" Source="https://webmail.jade-hs.de" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="4">
+                    <WebBrowser Margin="230,0,0,0" x:Name="WB_Webmail" Visibility="Hidden" Source="https://webmail.jade-hs.de" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="4">
                     </WebBrowser>
 
-                    <WebBrowser Panel.ZIndex="100"  x:Name="WB_Moodle" Visibility="Hidden" Source="https://moodle.jade-hs.de/moodle/login/index.php" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="4">
+                    <WebBrowser Margin="230,0,0,0" x:Name="WB_Moodle" Visibility="Hidden" Source="https://moodle.jade-hs.de/moodle/login/index.php" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="4">
                     </WebBrowser>
 
-                    <WebBrowser Panel.ZIndex="100"  x:Name="WB_Datenlaufwerk" Visibility="Hidden" Source="https://webfiler.jade-hs.de" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="4">
+                    <WebBrowser Margin="230,0,0,0" x:Name="WB_Datenlaufwerk" Visibility="Hidden" Source="https://webfiler.jade-hs.de" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="4">
                     </WebBrowser>
 
-                    <WebBrowser Panel.ZIndex="100"  x:Name="WB_GitHUB" Visibility="Hidden" Source="https://github.com/JanRipken" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="4">
+                    <WebBrowser Margin="230,0,0,0"  x:Name="WB_GitHUB" Visibility="Hidden" Source="https://github.com/JanRipken" Grid.Column="0" Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="4">
                     </WebBrowser>
 
-                    <Image Panel.ZIndex="100"  x:Name="I_Homeworkout" Source="Bilder/Homeworkout.png" Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" 
+                    <Image   x:Name="I_Homeworkout" Source="Bilder/Homeworkout.png" Grid.Row="0" Grid.RowSpan="4" Grid.Column="0" 
                            Grid.ColumnSpan="4" Visibility="Hidden"/>
 
 
