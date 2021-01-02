@@ -275,6 +275,22 @@ namespace Jade_HS_AllroundAPP
             WB_GitHUB.Visibility = Visibility.Visible;
         }
 
-       
+        private void LI_Ingineuerswissenschaften_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            LI_ICON_ingi_folderopen.Visibility = Visibility.Visible;
+            LI_ICON_ingi_folderclosed.Visibility = Visibility.Hidden;
+
+            LI_ICON_trash_folderopen.Visibility = Visibility.Hidden;
+            LI_ICON_trash_folderclosed.Visibility = Visibility.Visible;
+        }
+
+        private void LI_Trashsonstiges_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            LI_ICON_trash_folderopen.Visibility = Visibility.Visible;
+            LI_ICON_trash_folderclosed.Visibility = Visibility.Hidden;
+
+            LI_ICON_ingi_folderopen.Visibility = Visibility.Hidden;
+            LI_ICON_ingi_folderclosed.Visibility = Visibility.Visible;
+        }
     }
 }
