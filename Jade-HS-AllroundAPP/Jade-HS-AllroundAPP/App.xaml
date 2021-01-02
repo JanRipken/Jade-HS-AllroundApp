@@ -4,14 +4,15 @@
              xmlns:local="clr-namespace:Jade_HS_AllroundAPP"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+      
 
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="ButtonDesign.xaml"/>
+        <ResourceDictionary >
+            <ResourceDictionary.MergedDictionaries >
+                <ResourceDictionary  Source="ButtonDesign.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>    
-        
-    
+        </ResourceDictionary>
+
 
     </Application.Resources>
+
 </Application>

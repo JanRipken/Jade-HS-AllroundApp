@@ -4,102 +4,184 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Jade_HS_AllroundAPP"
+        xmlns:fa="clr-namespace:FontAwesome.WPF;assembly=FontAwesome.WPF" 
         mc:Ignorable="d"
-       Title="Jade-HS.AllroudAPP" Icon="Bilder/Jade-HS Logo.jpg" 
+        Title="Jade-HS.AllroudAPP" Icon="Bilder/Jade-HS Logo.jpg" 
         WindowStartupLocation="CenterScreen" WindowState="Maximized"
-        WindowStyle="None"
-        MouseDown="Window_MouseDown">
+        WindowStyle="None" ResizeMode="NoResize"
+        MouseDown="Window_MouseDown" Height="880" Width="1300" >
+
+    <Window.Resources>
+        <Storyboard x:Key="MenuOpen">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="70"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="300"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Key="MenuClose">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="GridMenu">
+                <EasingDoubleKeyFrame KeyTime="0" Value="300"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="70"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="Btn_MenuOpen">
+            <BeginStoryboard Storyboard="{StaticResource MenuOpen}"/>
+        </EventTrigger>
+
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="Btn_MenuClose">
+            <BeginStoryboard Storyboard="{StaticResource MenuClose}"/>
+        </EventTrigger>
+    </Window.Triggers>
+
+
+
+
 
     <Window.Background>
         <ImageBrush ImageSource="Bilder/bibliothek-buecher-globus-tisch-retro.jpg"  />
     </Window.Background>
 
-    <Grid>
+    <Grid >
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="60"/>
+            <ColumnDefinition Width="300"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="35"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
 
         </Grid.RowDefinitions>
 
 
+        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Background="White">
+            <StackPanel Background="White" HorizontalAlignment="Right"  Orientation="Horizontal" Grid.Row="0" Grid.Column="2">
+                <Button Style="{StaticResource ButtonDesign}"  Height="30" Width="30" Background="White" x:Name="btn_Minimize" Click="btn_Minimize_Click" >
+                    <fa:ImageAwesome Icon="WindowMinimize" ></fa:ImageAwesome>
+                </Button>
 
-        <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Grid.Row="0" Grid.Column="2">
-            <Button Background="White" x:Name="btn_Minimize" Click="btn_Minimize_Click" >
-                <Image Height="25" Source="Bilder/minimize-button-567898.png"/>
-            </Button>
+                <Button Style="{StaticResource ButtonDesign}"  Background="White" x:Name="btn_maximize" Click="btn_maximize_Click" >
+                    <fa:ImageAwesome Icon="WindowRestore" Margin="2"></fa:ImageAwesome>
+                </Button>
 
-            <Button Background="White" x:Name="btn_maximize" Click="btn_maximize_Click" >
-                <Image Height="25" Source="Bilder/maximize-512.png"/>
-            </Button>
-
-            <Button x:Name="btn_Close" Click="btn_Close_Click" Background="White" Margin="0">
-                <Image  Height="25" Source="Bilder/close-button-icon-19.jpg"/>
-            </Button>
-        </StackPanel>
-
-        <StackPanel Orientation="Vertical" Grid.RowSpan="3" Grid.Column="0">
-            <Menu Width="50" Height="50" Background="White" x:Name="btn_Menü">
+                <Button Style="{StaticResource ButtonDesign}"   x:Name="btn_Close" Click="btn_Close_Click" Background="White" Margin="0">
+                    <fa:ImageAwesome Icon="Close"  Margin="3"></fa:ImageAwesome>
+                </Button>
+            </StackPanel>
+        </Grid>
 
 
+        <StackPanel x:Name="GridMenu" Background="White"  Orientation="Vertical" Grid.RowSpan="3" Grid.Column="0" Width="70" HorizontalAlignment="Left">
 
-            </Menu>
+            <StackPanel  Background="#FF186B93" Height="100">
+                <Button x:Name="Btn_MenuClose" Visibility="Collapsed" Margin="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="35" Height="35" Background="{x:Null}" BorderBrush="{x:Null}" Click="Btn_CloseMenu_Click">
+                    <fa:ImageAwesome Icon="ArrowLeft" Foreground="#FF89A5CD" Width="30" Height="30" ></fa:ImageAwesome>
+                </Button>
 
-            <Button Height="50" Width="50" Background="White" Margin="0,70,0,0" x:Name="btn_jadehswebmailapi">
-                <Image   Source="Bilder/Jade-HS Logo.jpg"/>
-            </Button>
+                <Button x:Name="Btn_MenuOpen" Margin="20" VerticalAlignment="Top" HorizontalAlignment="Right" Width="35" Height="35" Background="{x:Null}" BorderBrush="{x:Null}" Click="Btn_OpenMenu_Click" >
+                    <fa:ImageAwesome Icon="Navicon" Foreground="#FF89A5CD" Width="30" Height="30" ></fa:ImageAwesome>
+                </Button>
 
-            <Button Height="50" Width="50" Background="White" Margin="0,10,0,0" >
-                <Image   Source="Bilder/Stundenplan.icon.png"/>
-            </Button>
+            </StackPanel>
 
-            <Button Height="50" Width="50" Background="White" Margin="0,10,0,0" >
-                <Image   Source="Bilder/moodle.png"/>
-            </Button>
+            <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <ListViewItem x:Name="LVI_Home" MouseDoubleClick="LVI_Home_MouseDoubleClick" Height="60">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="Home" Height="40"></fa:ImageAwesome>
+                        <TextBlock Text="Startseite" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0"/>
+                    </StackPanel>
+                </ListViewItem>
 
-            <Button Height="50" Width="50" Background="White" Margin="0,10,0,0" >
-                <Image   Source="Bilder/laufwerk.icon.png"/>
-            </Button>
+                <ListViewItem Height="60" x:Name="LVI_webmail" MouseDoubleClick="LVI_webmail_MouseDoubleClick">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="Envelope" Height="40"></fa:ImageAwesome>
+                        <TextBlock Text="Webmail" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0"/>
+                    </StackPanel>
+                </ListViewItem>
 
-            <Button Height="50" Width="50" Background="White" Margin="0,10,0,0" >
-                <Image   Source="Bilder/organisator.icon.jpg"/>
-            </Button>
+                <ListViewItem Height="60" x:Name="LVI_Stundenplan" MouseDoubleClick="LVI_Stundenplan_MouseDoubleClick">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="GraduationCap" Height="40"></fa:ImageAwesome>
+                        <TextBlock Text="Stundenplan" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0"/>
+                    </StackPanel>
+                </ListViewItem>
 
-            <Button Height="50" Width="50" Background="White" Margin="0,10,0,0" >
-                <Image   Source="Bilder/studenten hilfe icon.png"/>
-            </Button>
+                <ListViewItem Height="60" x:Name="LVI_Moodle" MouseDoubleClick="LVI_Moodle_MouseDoubleClick">
+                    <StackPanel Orientation="Horizontal">
+                        <Image   Source="Bilder/moodle.png" Height="55"/>
+                        <TextBlock Text="Moodle" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0"/>
+                    </StackPanel>
+                </ListViewItem>
 
-            <Button Height="50" Width="50" Background="White" Margin="0,10,0,0" >
-                <Image   Source="Bilder/sport.icon.png"/>
-            </Button>
+                <ListViewItem Height="60" x:Name="LVI_Datenlaufwerk" MouseDoubleClick="LVI_Datenlaufwerk_MouseDoubleClick">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="Cloud" Height="40"></fa:ImageAwesome>
+                        <TextBlock Text="Datenlaufwerke" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20,0,0,0"/>
+                    </StackPanel>
+                </ListViewItem>
 
-            <Button Height="50" Width="50" Background="White" Margin="0,10,0,0" >
-                <Image   Source="Bilder/cocktail.png"/>
-            </Button>
+                <ListViewItem Height="60" x:Name="LVI_Planner" MouseDoubleClick="LVI_Planner_MouseDoubleClick">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="Calendar" Height="40" Margin="7,0,0,0"></fa:ImageAwesome>
+                        <TextBlock Text="Planner" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="40,0,0,0"/>
+                    </StackPanel>
+                </ListViewItem>
 
+                <ListViewItem Height="60" x:Name="LVI_Assitours" MouseDoubleClick="LVI_Assitours_MouseDoubleClick">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="UserSecret" Height="40" Margin="7,0,0,0"></fa:ImageAwesome>
+                        <TextBlock Text="Assitours" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="40,0,0,0"/>
+                    </StackPanel>
+                </ListViewItem>
 
-            <Button Height="50" Width="50" Background="White" Margin="0,100,0,0" >
-                <Image   Source="Bilder/bewerbungen.icon.jpg"/>
-            </Button>
+                <ListViewItem Height="60" x:Name="LVI_Sport" MouseDoubleClick="LVI_Sport_MouseDoubleClick">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="Heart" Height="40" Margin="2,0,0,0"></fa:ImageAwesome>
+                        <TextBlock Text="Sport" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0"/>
+                    </StackPanel>
+                </ListViewItem>
+
+                <ListViewItem Height="60" x:Name="LVI_Cocktails" MouseDoubleClick="LVI_Cocktails_MouseDoubleClick">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="Beer" Height="40"></fa:ImageAwesome>
+                        <TextBlock Text="Cocktails" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0"/>
+                    </StackPanel>
+                </ListViewItem>
+
+                <ListViewItem Height="60" x:Name="LVI_Bewerbung" MouseDoubleClick="LVI_Bewerbung_MouseDoubleClick">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="File" Height="40" Margin="10,0,0,0"></fa:ImageAwesome>
+                        <TextBlock Text="Bewerbung" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0"/>
+                    </StackPanel>
+                </ListViewItem>
+
+                <ListViewItem Height="60" x:Name="LVI_GitHub" MouseDoubleClick="LVI_GitHub_MouseDoubleClick">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="Github" Height="40" Margin="7,0,0,0"></fa:ImageAwesome>
+                        <TextBlock Text="GitHub" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0"/>
+                    </StackPanel>
+                </ListViewItem>
+
+            </ListView>
+
 
         </StackPanel>
 
         <TextBlock Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2"
                    VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White"
-                   FontSize="50" Opacity="0.6" Background="Black" x:Name="TB_Wilkommen"  TextAlignment="Center" >
+                   FontSize="50" Opacity="0.6" Background="Black" x:Name="TB_Wilkommen"  TextAlignment="Center" Visibility="Hidden" >
             Wilkommen auf der Jade-HS-Allroud Application <LineBreak/> 
                 by Jan Ripken
-
         </TextBlock>
 
-        <Grid Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2" Visibility="Hidden">
+        <Grid x:Name="Grd_Hauptansicht" Margin="100,70,0,0" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="2" >
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="20"/>
@@ -116,12 +198,55 @@
             </Grid.RowDefinitions>
 
             <Border BorderBrush="White" BorderThickness="1" CornerRadius="5" 
-                    Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2" >
-                
+                    Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2"
+                    x:Name="bd_Entscheidung" Visibility="Visible" >
+
+
+                <Grid >
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
+
+
+                    <WebBrowser x:Name="WB_Webmail" Visibility="Hidden" Source="https://webmail.jade-hs.de" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2">
+                    </WebBrowser>
+
+                    <WebBrowser x:Name="WB_Moodle" Visibility="Hidden" Source="https://moodle.jade-hs.de/moodle/login/index.php" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2">
+                    </WebBrowser>
+
+                    <WebBrowser x:Name="WB_Datenlaufwerk" Visibility="Hidden" Source="https://webfiler.jade-hs.de" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2">
+                    </WebBrowser>
+
+                    
+                    <Image x:Name="I_Homeworkout" Source="Bilder/Homeworkout.png" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" 
+                           Grid.ColumnSpan="2" Visibility="Hidden"/>
+
+
+
+
+                    <WebBrowser x:Name="WB_GitHUB" Visibility="Hidden" Source="https://github.com/JanRipken" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2">
+                    </WebBrowser>
+
+                </Grid>
+
+
+
+
             </Border>
-            
-            
+
+
         </Grid>
-        
+
     </Grid>
 </Window>

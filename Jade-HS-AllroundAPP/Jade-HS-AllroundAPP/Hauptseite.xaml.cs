@@ -53,6 +53,197 @@ namespace Jade_HS_AllroundAPP
                 DragMove();
         }
 
-        
+             
+
+        private void Btn_OpenMenu_Click(object sender, RoutedEventArgs e)
+        {
+            Btn_MenuOpen.Visibility = Visibility.Collapsed;
+            Btn_MenuClose.Visibility = Visibility.Visible;
+        }
+
+        private void Btn_CloseMenu_Click(object sender, RoutedEventArgs e)
+        {
+            Btn_MenuOpen.Visibility = Visibility.Visible;
+            Btn_MenuClose.Visibility = Visibility.Collapsed;
+        }
+
+       
+
+        private void LVI_Home_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            TB_Wilkommen.Visibility = Visibility.Visible;           
+            bd_Entscheidung.Visibility = Visibility.Hidden;
+            WB_Webmail.Visibility = Visibility.Hidden;
+
+            WB_Moodle.Visibility = Visibility.Hidden;
+            WB_Datenlaufwerk.Visibility = Visibility.Hidden;
+
+
+            I_Homeworkout.Visibility = Visibility.Hidden;
+
+
+            WB_GitHUB.Visibility = Visibility.Hidden;
+        }
+
+        private void LVI_webmail_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            TB_Wilkommen.Visibility = Visibility.Hidden;
+            bd_Entscheidung.Visibility = Visibility.Visible;
+            WB_Webmail.Visibility = Visibility.Visible;
+
+            WB_Moodle.Visibility = Visibility.Hidden;
+            WB_Datenlaufwerk.Visibility = Visibility.Hidden;
+
+
+            I_Homeworkout.Visibility = Visibility.Hidden;
+
+
+            WB_GitHUB.Visibility = Visibility.Hidden;
+        }
+
+        private void LVI_Stundenplan_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            TB_Wilkommen.Visibility = Visibility.Hidden;
+            bd_Entscheidung.Visibility = Visibility.Visible;
+            WB_Webmail.Visibility = Visibility.Hidden;
+
+            WB_Moodle.Visibility = Visibility.Hidden;
+            WB_Datenlaufwerk.Visibility = Visibility.Hidden;
+
+
+            I_Homeworkout.Visibility = Visibility.Hidden;
+
+
+            WB_GitHUB.Visibility = Visibility.Hidden;
+        }
+
+        private void LVI_Moodle_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            TB_Wilkommen.Visibility = Visibility.Hidden;
+            bd_Entscheidung.Visibility = Visibility.Visible;
+            WB_Webmail.Visibility = Visibility.Hidden;
+
+            WB_Moodle.Visibility = Visibility.Visible;
+            WB_Datenlaufwerk.Visibility = Visibility.Hidden;
+
+
+            I_Homeworkout.Visibility = Visibility.Hidden;
+
+
+            WB_GitHUB.Visibility = Visibility.Hidden;
+        }
+
+        private void LVI_Datenlaufwerk_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            TB_Wilkommen.Visibility = Visibility.Hidden;
+            bd_Entscheidung.Visibility = Visibility.Visible;
+            WB_Webmail.Visibility = Visibility.Hidden;
+
+            WB_Moodle.Visibility = Visibility.Hidden;
+            WB_Datenlaufwerk.Visibility = Visibility.Visible;
+
+
+            I_Homeworkout.Visibility = Visibility.Hidden;
+
+
+            WB_GitHUB.Visibility = Visibility.Hidden;
+        }
+
+        private void LVI_Planner_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            TB_Wilkommen.Visibility = Visibility.Hidden;
+            bd_Entscheidung.Visibility = Visibility.Visible;
+            WB_Webmail.Visibility = Visibility.Hidden;
+
+            WB_Moodle.Visibility = Visibility.Hidden;
+            WB_Datenlaufwerk.Visibility = Visibility.Hidden;
+
+
+            I_Homeworkout.Visibility = Visibility.Hidden;
+
+
+            WB_GitHUB.Visibility = Visibility.Hidden;
+
+        }
+
+        private void LVI_Assitours_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            TB_Wilkommen.Visibility = Visibility.Hidden;
+            bd_Entscheidung.Visibility = Visibility.Visible;
+            WB_Webmail.Visibility = Visibility.Hidden;
+
+            WB_Moodle.Visibility = Visibility.Hidden;
+            WB_Datenlaufwerk.Visibility = Visibility.Hidden;
+
+
+            I_Homeworkout.Visibility = Visibility.Hidden;
+
+
+            WB_GitHUB.Visibility = Visibility.Hidden;
+        }
+
+        private void LVI_Sport_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            TB_Wilkommen.Visibility = Visibility.Hidden;
+            bd_Entscheidung.Visibility = Visibility.Visible;
+            WB_Webmail.Visibility = Visibility.Hidden;
+
+            WB_Moodle.Visibility = Visibility.Hidden;
+            WB_Datenlaufwerk.Visibility = Visibility.Hidden;
+
+
+            I_Homeworkout.Visibility = Visibility.Visible;
+
+
+            WB_GitHUB.Visibility = Visibility.Hidden;
+        }
+
+        private void LVI_Cocktails_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            TB_Wilkommen.Visibility = Visibility.Hidden;
+            bd_Entscheidung.Visibility = Visibility.Visible;
+            WB_Webmail.Visibility = Visibility.Hidden;
+
+            WB_Moodle.Visibility = Visibility.Hidden;
+            WB_Datenlaufwerk.Visibility = Visibility.Hidden;
+
+
+            I_Homeworkout.Visibility = Visibility.Hidden;
+
+
+            WB_GitHUB.Visibility = Visibility.Hidden;
+        }
+
+        private void LVI_Bewerbung_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            TB_Wilkommen.Visibility = Visibility.Hidden;
+            bd_Entscheidung.Visibility = Visibility.Visible;
+            WB_Webmail.Visibility = Visibility.Hidden;
+
+            WB_Moodle.Visibility = Visibility.Hidden;
+            WB_Datenlaufwerk.Visibility = Visibility.Hidden;
+
+
+            I_Homeworkout.Visibility = Visibility.Hidden;
+
+
+            WB_GitHUB.Visibility = Visibility.Hidden;
+        }
+
+        private void LVI_GitHub_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            TB_Wilkommen.Visibility = Visibility.Hidden;
+            bd_Entscheidung.Visibility = Visibility.Visible;
+            WB_Webmail.Visibility = Visibility.Hidden;
+
+            WB_Moodle.Visibility = Visibility.Hidden;
+            WB_Datenlaufwerk.Visibility = Visibility.Hidden;
+
+
+            I_Homeworkout.Visibility = Visibility.Hidden;
+
+
+            WB_GitHUB.Visibility = Visibility.Visible;
+        }
     }
 }

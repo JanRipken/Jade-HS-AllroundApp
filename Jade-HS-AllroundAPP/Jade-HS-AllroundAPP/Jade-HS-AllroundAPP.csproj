@@ -50,6 +50,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.WPF, Version=4.7.0.37774, Culture=neutral, PublicKeyToken=0758b07a11a4f466, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.WPF.4.7.0.9\lib\net40\FontAwesome.WPF.dll</HintPath>
+    </Reference>
     <Reference Include="MahApps.Metro.IconPacks.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=0c0d510f9915137a, processorArchitecture=MSIL">
       <HintPath>..\packages\MahApps.Metro.IconPacks.Material.4.8.0\lib\net47\MahApps.Metro.IconPacks.Core.dll</HintPath>
     </Reference>
@@ -58,6 +61,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -118,6 +123,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Bilder\Homeworkout.png" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -152,40 +163,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Bilder\minimize-button-567898.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Bilder\maximize-512.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Bilder\close-button-icon-19.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Bilder\sport.icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Bilder\Stundenplan.icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Bilder\organisator.icon.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Bilder\moodle.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Bilder\laufwerk.icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Bilder\cocktail.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Bilder\studenten hilfe icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Bilder\bewerbungen.icon.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Bilder\menu.icon.png" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
