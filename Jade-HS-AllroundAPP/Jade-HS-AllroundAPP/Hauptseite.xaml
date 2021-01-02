@@ -99,6 +99,13 @@
                     </StackPanel>
                 </ListViewItem>
 
+                <ListViewItem Height="60" x:Name="LVI_Konto" MouseDoubleClick="LVI_Konto_MouseDoubleClick">
+                    <StackPanel Orientation="Horizontal">
+                        <fa:ImageAwesome Icon="UserCircle" Height="40" Margin="6,0,0,0"></fa:ImageAwesome>
+                        <TextBlock Text="Konto" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="30,0,0,0"/>
+                    </StackPanel>
+                </ListViewItem>
+
                 <ListViewItem Height="60" x:Name="LVI_webmail" MouseDoubleClick="LVI_webmail_MouseDoubleClick">
                     <StackPanel Orientation="Horizontal">
                         <fa:ImageAwesome Icon="Envelope" Height="40"></fa:ImageAwesome>

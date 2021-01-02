@@ -56,14 +56,32 @@ namespace Jade_HS_AllroundAPP
             registrierung.Show();
         }
 
-        private void txtb_Username_IsMouseCaptureWithinChanged(object sender, DependencyPropertyChangedEventArgs e)
+       
+
+      
+
+        private void txtb_Username_TextChanged(object sender, TextChangedEventArgs e)
         {
-            txtb_Username.Clear();
+            if (txtb_Username.Text.Length == 0)
+            {
+                lbl_username.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                lbl_username.Visibility = Visibility.Hidden;
+            }
         }
 
-        private void txtb_Password_IsMouseCaptureWithinChanged(object sender, DependencyPropertyChangedEventArgs e)
+        private void txtb_Password_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            txtb_Password.Clear();
+            if (txtb_Password.Password.Length == 0)
+            {
+                lbl_Passwort.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                lbl_Passwort.Visibility = Visibility.Hidden;
+            }
         }
     }
 }

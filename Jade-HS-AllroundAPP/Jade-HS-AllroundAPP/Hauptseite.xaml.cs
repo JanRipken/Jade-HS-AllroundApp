@@ -74,6 +74,24 @@ namespace Jade_HS_AllroundAPP
         {
             TB_Wilkommen.Visibility = Visibility.Visible;           
             bd_Entscheidung.Visibility = Visibility.Hidden;
+
+            WB_Webmail.Visibility = Visibility.Hidden;
+
+            WB_Moodle.Visibility = Visibility.Hidden;
+            WB_Datenlaufwerk.Visibility = Visibility.Hidden;
+
+
+            I_Homeworkout.Visibility = Visibility.Hidden;
+
+
+            WB_GitHUB.Visibility = Visibility.Hidden;
+        }
+
+        private void LVI_Konto_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            TB_Wilkommen.Visibility = Visibility.Hidden;
+            bd_Entscheidung.Visibility = Visibility.Visible;
+
             WB_Webmail.Visibility = Visibility.Hidden;
 
             WB_Moodle.Visibility = Visibility.Hidden;
@@ -90,6 +108,7 @@ namespace Jade_HS_AllroundAPP
         {
             TB_Wilkommen.Visibility = Visibility.Hidden;
             bd_Entscheidung.Visibility = Visibility.Visible;
+
             WB_Webmail.Visibility = Visibility.Visible;
 
             WB_Moodle.Visibility = Visibility.Hidden;
@@ -106,6 +125,7 @@ namespace Jade_HS_AllroundAPP
         {
             TB_Wilkommen.Visibility = Visibility.Hidden;
             bd_Entscheidung.Visibility = Visibility.Visible;
+
             WB_Webmail.Visibility = Visibility.Hidden;
 
             WB_Moodle.Visibility = Visibility.Hidden;
@@ -122,6 +142,7 @@ namespace Jade_HS_AllroundAPP
         {
             TB_Wilkommen.Visibility = Visibility.Hidden;
             bd_Entscheidung.Visibility = Visibility.Visible;
+
             WB_Webmail.Visibility = Visibility.Hidden;
 
             WB_Moodle.Visibility = Visibility.Visible;
@@ -138,6 +159,7 @@ namespace Jade_HS_AllroundAPP
         {
             TB_Wilkommen.Visibility = Visibility.Hidden;
             bd_Entscheidung.Visibility = Visibility.Visible;
+
             WB_Webmail.Visibility = Visibility.Hidden;
 
             WB_Moodle.Visibility = Visibility.Hidden;
@@ -154,6 +176,7 @@ namespace Jade_HS_AllroundAPP
         {
             TB_Wilkommen.Visibility = Visibility.Hidden;
             bd_Entscheidung.Visibility = Visibility.Visible;
+
             WB_Webmail.Visibility = Visibility.Hidden;
 
             WB_Moodle.Visibility = Visibility.Hidden;
@@ -171,6 +194,7 @@ namespace Jade_HS_AllroundAPP
         {
             TB_Wilkommen.Visibility = Visibility.Hidden;
             bd_Entscheidung.Visibility = Visibility.Visible;
+
             WB_Webmail.Visibility = Visibility.Hidden;
 
             WB_Moodle.Visibility = Visibility.Hidden;
@@ -187,6 +211,7 @@ namespace Jade_HS_AllroundAPP
         {
             TB_Wilkommen.Visibility = Visibility.Hidden;
             bd_Entscheidung.Visibility = Visibility.Visible;
+
             WB_Webmail.Visibility = Visibility.Hidden;
 
             WB_Moodle.Visibility = Visibility.Hidden;
@@ -203,6 +228,7 @@ namespace Jade_HS_AllroundAPP
         {
             TB_Wilkommen.Visibility = Visibility.Hidden;
             bd_Entscheidung.Visibility = Visibility.Visible;
+
             WB_Webmail.Visibility = Visibility.Hidden;
 
             WB_Moodle.Visibility = Visibility.Hidden;
@@ -219,6 +245,7 @@ namespace Jade_HS_AllroundAPP
         {
             TB_Wilkommen.Visibility = Visibility.Hidden;
             bd_Entscheidung.Visibility = Visibility.Visible;
+
             WB_Webmail.Visibility = Visibility.Hidden;
 
             WB_Moodle.Visibility = Visibility.Hidden;
@@ -235,6 +262,7 @@ namespace Jade_HS_AllroundAPP
         {
             TB_Wilkommen.Visibility = Visibility.Hidden;
             bd_Entscheidung.Visibility = Visibility.Visible;
+
             WB_Webmail.Visibility = Visibility.Hidden;
 
             WB_Moodle.Visibility = Visibility.Hidden;
@@ -246,5 +274,7 @@ namespace Jade_HS_AllroundAPP
 
             WB_GitHUB.Visibility = Visibility.Visible;
         }
+
+       
     }
 }
