@@ -73,7 +73,7 @@ namespace Jade_HS_AllroundAPP
 
         private void DP_Gebrtstag_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            
         }
     }
 }

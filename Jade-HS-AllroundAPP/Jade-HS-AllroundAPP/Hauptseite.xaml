@@ -228,15 +228,16 @@
                     <WebBrowser x:Name="WB_Datenlaufwerk" Visibility="Hidden" Source="https://webfiler.jade-hs.de" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2">
                     </WebBrowser>
 
+                    <WebBrowser  x:Name="WB_GitHUB" Visibility="Hidden" Source="https://github.com/JanRipken" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2">
+                    </WebBrowser>
                     
                     <Image x:Name="I_Homeworkout" Source="Bilder/Homeworkout.png" Grid.Row="1" Grid.RowSpan="2" Grid.Column="1" 
                            Grid.ColumnSpan="2" Visibility="Hidden"/>
 
 
+                   
 
 
-                    <WebBrowser x:Name="WB_GitHUB" Visibility="Hidden" Source="https://github.com/JanRipken" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="1" Grid.RowSpan="2">
-                    </WebBrowser>
 
                 </Grid>
 
